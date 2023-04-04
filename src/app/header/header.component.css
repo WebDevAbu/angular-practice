@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+}
+nav {
+  background-color: rgb(193, 220, 220);
+}
+nav img {
+  width: 70px;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+ul {
+  display: flex;
+}
+ul li {
+  list-style: none;
+  cursor: pointer;
+  padding: 4px 12px;
+  /* background-color: white; */
+  margin-right: 10px;
+  border-radius: 20px;
+  /* margin-bottom: 4px; */
+  /* border-bottom: 0px solid white; */
+  /* transition: border-bottom 0.1s; */
+  background-color: none;
+  transition: background-color 0.5s;
+}
+ul li:hover {
+  /* border-bottom: 2px solid red; */
+  background-color: wheat;
+}

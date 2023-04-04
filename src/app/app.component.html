@@ -1,0 +1,182 @@
+<style>
+  h1 {
+    background-color: red;
+  }
+</style>
+<!-- interpolation -->
+<!-- <h1>hello world {{ title }}</h1>
+<h1>hello world {{ blog }}</h1>
+<h1>hello world {{ getBlog() }}</h1> -->
+
+<!-- component call or reuse-->
+<!-- <app-login></app-login>
+<app-inline-style></app-inline-style>
+<app-inline-template></app-inline-template>
+<app-both></app-both>
+<app-sign-in></app-sign-in> -->
+
+<!-- Function call -->
+<!-- <button (click)="getName('torab', 'khan')">Click me</button> -->
+
+<!-- Events -->
+<!-- <br /><br />
+<input #box1 (keyup)="getClick(box1.value)" placeholder="event keyup " />
+
+<br /><br />
+<input #box2 (keydown)="getClick(box2.value)" placeholder="event keydown " />
+
+<br /><br />
+<input #box3 (blur)="getClick(box3.value)" placeholder="event blur " />
+
+<br /><br />
+<input #box4 (input)="getClick(box4.value)" placeholder="input" /><br /> -->
+
+<!-- Counter -->
+<!-- <button (click)="getCount('add')">++</button>
+<h1 style="color: gray">{{ count }}</h1>
+<button (click)="getCount('minus')">--</button><br /> -->
+
+<!-- Property Binding & interpolation -->
+<!-- <input
+  type="text"
+  placeholder="interpolation"
+  value="{{ value }}"
+  disabled="{{ disable }}"
+/><br />
+<input
+  type="text"
+  placeholder="interpolation"
+  [value]="value"
+  [disabled]="disable"
+/> -->
+
+<!-- If else condition -->
+<!-- <h3 *ngIf="show; else elseBlock">if block</h3>
+<ng-template #elseBlock>
+  <h3>else block</h3>
+</ng-template> -->
+
+<!-- else if -->
+<!-- <ng-template [ngIf]="color == 'red'">
+  <h3>This is red color</h3>
+</ng-template>
+<ng-template [ngIf]="color == 'green'">
+  <h3>This is green color</h3>
+</ng-template>
+<ng-template [ngIf]="color == 'black'">
+  <h3>This is red color</h3>
+</ng-template> -->
+
+<!-- Switch Case -->
+<!-- <div [ngSwitch]="color">
+  <h2 *ngSwitchCase="'red'">red</h2>
+  <h2 *ngSwitchCase="'green'">green</h2>
+  <h2 *ngSwitchCase="'blue'">blue</h2>
+  <h2 *ngSwitchCase="'gray'">gray</h2>
+  <h2 *ngSwitchCase="'yello'">yellow</h2>
+  <h2 *ngSwitchDefault>black</h2>
+</div> -->
+
+<!-- for loop -->
+<!-- <h3 *ngFor="let item of arr">
+  {{ item.name }} {{ item.email }} {{ item.phone }}
+  <h3 *ngFor="let media of item.socialMedia">{{ media }}</h3>
+</h3> -->
+
+<!-- Header -->
+<!-- <app-header></app-header> -->
+
+<!-- Forms -->
+<!-- <form #basicForm="ngForm" (ngSubmit)="getData(basicForm.value)">
+  <input type="text" ngModel name="name" placeholder="Enter name" />
+  <br /><br />
+  <input type="email" ngModel name="email" placeholder="Enter email" />
+  <br /><br />
+  <input type="number" ngModel name="phone" placeholder="Enter phone no" />
+  <br /><br />
+  <button>sumbit</button>
+</form>
+
+<ul>
+  <li>{{ data.name }}</li>
+  <li>{{ data.email }}</li>
+  <li>{{ data.phone }}</li>
+</ul> -->
+
+<!-- Toggle Element -->
+<!-- <h2>Toggle the Element</h2>
+<button (click)="Toggle()">Toggle</button>
+<div>
+  <h2 *ngIf="toggle">Hello Testing...</h2>
+</div> -->
+
+<!-- Testing Bootstrap -->
+<!-- <p>
+  <ngb-alert [dismissible]="false">
+    <strong>Warning!</strong> Better check yourself, you're not looking too
+    good.
+  </ngb-alert>
+</p>
+
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    ></button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="mb-3">
+        <label for="dateOfBirth">Date of birth</label>
+        <div class="input-group">
+          <input
+            id="dateOfBirth"
+            class="form-control"
+            placeholder="yyyy-mm-dd"
+            name="dp"
+            ngbDatepicker
+            #dp="ngbDatepicker"
+          />
+          <button
+            class="btn btn-outline-secondary bi bi-calendar3"
+            (click)="dp.toggle()"
+            type="button"
+          ></button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-outline-dark"
+      (click)="modal.close('Save click')"
+    >
+      Save
+    </button>
+  </div>
+</ng-template>
+<button class="btn btn-lg btn-outline-primary" (click)="open(content)">
+  Launch demo modal
+</button>
+<hr />
+<pre>{{ closeResult }}</pre> -->
+
+<!-- Todo List -->
+<!-- <input #todolist type="text" name="list" placeholder="enter list item" />
+<button (click)="addList(todolist.value)">Add</button>
+
+<ul *ngFor="let item of list">
+  <li>{{ item.name }}</li>
+  <button (click)="delete(item.id)">delete</button>
+</ul> -->
+
+<!-- Parent to child Props -->
+<!-- <app-child [randomData]="pass" [random]="pass1"></app-child> -->
+
+<!-- Child to Parent -->
+<app-child (update)="updateDate($event)"></app-child>

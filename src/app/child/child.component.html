@@ -1,0 +1,6 @@
+<h1>{{ randomData }}</h1>
+<h1>{{ random }}</h1>
+
+<!-- Child to Parent -->
+<input type="text" placeholder="enter text.." #box />
+<button (click)="update.emit(box.value)">Update</button>
